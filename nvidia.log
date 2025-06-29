@@ -1,0 +1,94 @@
+Circuit: * C:\Users\16474\Desktop\thesis\nvidia.asc
+
+v1: Removing PWL point (1.9e-11,0)
+v1: Removing PWL point (9.9e-11,0.75)
+v1: Removing PWL point (1.59e-10,0)
+v1: Removing PWL point (2.39e-10,0.75)
+v1: Removing PWL point (2.79e-10,0)
+v1: Removing PWL point (3.39e-10,0.75)
+v1: Removing PWL point (3.79e-10,0)
+v1: Removing PWL point (4.19e-10,0.75)
+v1: Removing PWL point (4.59e-10,0)
+v1: Removing PWL point (4.99e-10,0.75)
+v1: Removing PWL point (5.99e-10,0)
+v1: Removing PWL point (6.79e-10,0.75)
+v1: Removing PWL point (7.39e-10,0)
+v1: Removing PWL point (8.39e-10,0)
+v1: Removing PWL point (8.79e-10,0.75)
+v1: Removing PWL point (9.39e-10,0)
+v1: Removing PWL point (9.79e-10,0.75)
+v1: Removing PWL point (1.019e-09,0)
+v1: Removing PWL point (1.079e-09,0.75)
+v1: Removing PWL point (1.119e-09,0)
+v1: Removing PWL point (1.199e-09,0)
+v1: Removing PWL point (1.279e-09,0.75)
+v1: Removing PWL point (1.399e-09,0.75)
+v1: Removing PWL point (1.499e-09,0.75)
+v1: Removing PWL point (1.639e-09,0.75)
+v1: Removing PWL point (1.759e-09,0)
+v1: Removing PWL point (1.859e-09,0)
+v1: Removing PWL point (1.919e-09,0.75)
+v1: Removing PWL point (1.959e-09,0)
+v1: Removing PWL point (2.039e-09,0)
+v1: Removing PWL point (2.099e-09,0)
+v1: Removing PWL point (2.199e-09,0)
+v1: Removing PWL point (2.239e-09,0.75)
+v1: Removing PWL point (2.299e-09,0)
+v1: Removing PWL point (2.459e-09,0.75)
+v1: Removing PWL point (2.519e-09,0.75)
+v5: Removing PWL point (1.9e-11,0.75)
+v5: Removing PWL point (1.19e-10,0)
+v5: Removing PWL point (1.79e-10,0.75)
+v5: Removing PWL point (2.59e-10,0.75)
+v5: Removing PWL point (2.99e-10,0)
+v5: Removing PWL point (3.59e-10,0.75)
+v5: Removing PWL point (4.39e-10,0)
+v5: Removing PWL point (5.59e-10,0)
+v5: Removing PWL point (7.19e-10,0.75)
+v5: Removing PWL point (7.99e-10,0.75)
+v5: Removing PWL point (8.99e-10,0)
+v5: Removing PWL point (9.39e-10,0.75)
+v5: Removing PWL point (1.019e-09,0.75)
+v5: Removing PWL point (1.179e-09,0)
+v5: Removing PWL point (1.279e-09,0.75)
+v5: Removing PWL point (1.359e-09,0)
+v5: Removing PWL point (1.479e-09,0)
+v5: Removing PWL point (1.539e-09,0.75)
+v5: Removing PWL point (1.599e-09,0)
+v5: Removing PWL point (1.739e-09,0.75)
+v5: Removing PWL point (1.839e-09,0.75)
+v5: Removing PWL point (1.919e-09,0.75)
+v5: Removing PWL point (1.999e-09,0)
+v5: Removing PWL point (2.039e-09,0.75)
+v5: Removing PWL point (2.099e-09,0)
+v5: Removing PWL point (2.159e-09,0.75)
+v5: Removing PWL point (2.199e-09,0)
+v5: Removing PWL point (2.299e-09,0.75)
+v5: Removing PWL point (2.339e-09,0)
+v5: Removing PWL point (2.379e-09,0.75)
+v5: Removing PWL point (2.419e-09,0)
+WARNING: Node NC_01 is floating.
+WARNING: Node NC_02 is floating.
+WARNING: Node NC_03 is floating.
+WARNING: Node NC_04 is floating.
+
+Direct Newton iteration for .op point succeeded.
+
+Date: Sun Jun 29 15:33:09 2025
+Total elapsed time: 0.190 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 3849
+traniter = 3843
+tranpoints = 1779
+accept = 1779
+rejected = 0
+matrix size = 48
+fillins = 2
+solver = Normal
+Avg thread counts: 3.9/4.0/4.3/2.5
+Matrix Compiler1: 1.90 KB object code size  0.5/0.4/[0.3]
+Matrix Compiler2: 3.49 KB object code size  0.3/0.5/[0.3]
+
