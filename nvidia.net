@@ -5,7 +5,7 @@ Rh1 Vpada Vina 190
 Rh2 Vina Vrepa 250
 Rch N004 Vpada 10.75
 T1 N004 0 N005 0 Td=8p Z0=40
-VDD N013 0 0.75
+VDD N014 0 0.75
 Rf Vina Vouta 1.2k
 V2 N001 0 0.75
 V3 N007 0 0.75
@@ -15,28 +15,38 @@ V5 Datab 0 PWL file=prbs7_b.txt
 Rs1 Vpadb Vdrvb 22.5
 Rh3 Vpadb Vinb 190
 Rh4 Vinb Vrepb 250
-VDD1 N014 0 0.75
+VDD1 N015 0 0.75
 Rf1 Vinb Voutb 1.2k
 V6 N002 0 0.75
 V7 N008 0 0.75
 Rdrv1 Vdrvb N006 22.5
 Rrep1 Vrepb N012 124
 A2 0 0 0 0 0 0 0 0 BUF .param Vhigh=0.75 Vlow=0
-A1 Dataa 0 0 0 0 N009 0 0 BUF .param Vhigh=0.75 Vlow=0
-A3 Datab 0 0 0 0 N010 0 0 BUF .param Vhigh=0.75 Vlow=0
 M17 N001 Dataa N003 N001 PMOS l=45n w=1.0u
 M1 N003 Dataa 0 0 NMOS l=45n w=1.0u
 Rch1 Vpadb N005 10.75
 M2 N007 N009 N011 N007 PMOS l=45n w=1.0u
-M5 N013 Vina Vouta N013 PMOS l=45n w=1.0u
+M5 N014 Vina Vouta N014 PMOS l=45n w=1.0u
 M6 N008 N010 N012 N008 PMOS l=45n w=1.0u
 M10 N002 Datab N006 N002 PMOS l=45n w=1.0u
-M11 N014 Vinb Voutb N014 PMOS l=45n w=1.0u
+M11 N015 Vinb Voutb N015 PMOS l=45n w=1.0u
 M3 N011 N009 0 0 NMOS l=45n w=1.0u
 M4 Vouta Vina 0 0 NMOS l=45n w=1.0u
 M7 N012 N010 0 0 NMOS l=45n w=1.0u
 M8 N006 Datab 0 0 NMOS l=45n w=1.0u
 M9 Voutb Vinb 0 0 NMOS l=45n w=1.0u
+A4 Dataa 0 0 0 0 N009 0 0 BUF .param Vhigh=0.75 Vlow=0
+A1 Datab 0 0 0 0 N010 0 0 BUF .param Vhigh=0.75 Vlow=0
+R7 P001 NC_16 7.2
+C7 P002 P001 8.3f
+R8 P003 P002 7.2
+C8 P004 P003 8.3f
+R9 P005 P004 7.2
+C9 NC_17 P005 8.3f
+C1 Vrepa 0 200f
+C2 Vrepb 0 200f
+V4 N013 0 0.375
+R N013 0 1
 .model NMOS NMOS
 .model PMOS PMOS
 .lib C:\Users\16474\AppData\Local\LTspice\lib\cmp\standard.mos
@@ -55,15 +65,15 @@ M9 Voutb Vinb 0 0 NMOS l=45n w=1.0u
 + rdsw=100 vdsat=0.1 cox=3e-2 cgso=1e-10 cgdo=1e-10
 .model M17 pmos level=54 version=4.7 tox=1.0n nch=1 u0=90 vsat=1.0e7 vth0=-0.35
 + rdsw=100 vdsat=0.1 cox=3e-2 cgso=1e-10 cgdo=1e-10
-.model M20 pmos level=54 version=4.7 tox=1.0n nch=1 u0=90 vsat=1.0e7 vth0=-0.35
+.model M2 pmos level=54 version=4.7 tox=1.0n nch=1 u0=90 vsat=1.0e7 vth0=-0.35
 + rdsw=100 vdsat=0.1 cox=3e-2 cgso=1e-10 cgdo=1e-10
-.model M22 pmos level=54 version=4.7 tox=1.0n nch=1 u0=90 vsat=1.0e7 vth0=-0.35
+.model M5 pmos level=54 version=4.7 tox=1.0n nch=1 u0=90 vsat=1.0e7 vth0=-0.35
 + rdsw=100 vdsat=0.1 cox=3e-2 cgso=1e-10 cgdo=1e-10
-.model M18 pmos level=54 version=4.7 tox=1.0n nch=1 u0=90 vsat=1.0e7 vth0=-0.35
+.model M11 pmos level=54 version=4.7 tox=1.0n nch=1 u0=90 vsat=1.0e7 vth0=-0.35
 + rdsw=100 vdsat=0.1 cox=3e-2 cgso=1e-10 cgdo=1e-10
-.model M19 pmos level=54 version=4.7 tox=1.0n nch=1 u0=90 vsat=1.0e7 vth0=-0.35
+.model M6 pmos level=54 version=4.7 tox=1.0n nch=1 u0=90 vsat=1.0e7 vth0=-0.35
 + rdsw=100 vdsat=0.1 cox=3e-2 cgso=1e-10 cgdo=1e-10
-.model M21 pmos level=54 version=4.7 tox=1.0n nch=1 u0=90 vsat=1.0e7 vth0=-0.35
+.model M10 pmos level=54 version=4.7 tox=1.0n nch=1 u0=90 vsat=1.0e7 vth0=-0.35
 + rdsw=100 vdsat=0.1 cox=3e-2 cgso=1e-10 cgdo=1e-10
 .backanno
 .end
