@@ -1,0 +1,43 @@
+ECE Workstations Lab Introduction: Fall 2024
+
+An account on the ECE Workstations Lab has been set up for you for your course
+work.  Here are a few notes about using this system:
+
+-your username is your UTORid, and the initial password is set to your student
+	number.  Please use the "passwd" command to set a proper password
+	ASAP, as this initial default isn't too hard for someone else to
+	figure out, and dealing with a subverted account is a huge waste of
+	your time and mine.  Send email to "tim@eecg.utoronto.ca" if you
+	have account difficulties or to report any system problem, but only
+	TAs and the instructors can help with course work questions.
+
+-the ECE Workstations Lab machines are named "ugNNN.eecg.utoronto.ca, and are
+	located in GB243 (ug132.eecg - ug180.eecg), GB251E (ug226.eecg -
+	ug249.eecg), SF2102 (ug201.eecg - ug225.eecg), and SF4102 (was SF2204)
+	(ug51.eecg - ug80.eecg).  The current door code is 16384.
+
+-remote use of all Lab machines via ssh is possible, plus ug250.eecg and
+	ug251.eecg are older machines which can be used for remote
+	access only, and ug252.eecg and ug253.eecg are new remote-only
+	CUDA-equipped servers.  VNC is the usual GUI remote access method:
+	the "ece297vnc" command script plus the ECE297S tutorial at
+	<https://www-ug.eecg.utoronto.ca/~tim/vnc-scripted.pdf> makes this
+	pretty easy, or there's an older tutorial version at
+	<https://www-ug.eecg.utoronto.ca/~tim/vnc.pdf> which goes into more
+	detail.  Use "ruptime -l" to find the least-used machines.
+
+-the Lab computers currently all run Debian "Bookworm".  The standard desktop
+	is "MATE" (pronounced "ma-tay": it's a South American plant & drink),
+	which is a continuation of the old Gnome2, but there are minor
+	differences.  For instance, the standard terminal program is "MATE
+	Terminal", which is found in the Applications => System Tools menu.
+
+-note that you have a home directory disk quota, which you can check with
+	the "quota" command, and "du -sk * .??*" will tell you exactly where
+	your space is being used.  Connect remotely via ssh (not VNC) and
+	clean up if you accidentally go over the limit.
+
+-course accounts will go away again after the end of the term, so please
+	make your own copies of any material you wish to keep.  Accounts for
+	those in ECE undergrad and MEng programs last for the duration of
+	program enrollment.

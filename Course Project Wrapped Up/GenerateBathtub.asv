@@ -1,0 +1,79 @@
+function GenerateBathtub(pdf3D, simSettings)
+% GenerateBathtub - Plot SER bathtub curves from a 3D eye density matrix
+%
+% Inputs:
+%   - pdf3D        : 2D matrix (time × amplitude), normalized PDF
+%   - simSettings  : Contains pdfRange, pdfdx, pam, SER, samplesPerSymb
+
+    pdfRange = simSettings.pdfRange;
+    dx = simSettings.pdfdx;
+    pam = simSettings.pam;
+    samplesPerSymb = simSettings.samplesPerSymb;
+    X = linspace(-0.5, 0.5, samplesPerSymb);  % time axis (UI)
+
+    % === Convert PDF vertical axis to mV ===
+    Y = pdfRange * 1e3;
+
+    % === Determine vertical decision boundaries ===
+    % Get the actual PAM voltage levels from the signal
+    mainCursor = max(simResult.output);
+    levels = linspace(-mainCursor, mainCursor, pam);
+    
+    % Compute decision boundaries (midpoints between adjacent levels)
+    decisionBoundaries = 0.5 * (levels(1:end-1) + levels(2:end));
+
+    % Preallocate SER
+    SER = zeros(pam - 1, samplesPerSymb);
+
+    % Loop over each time sample (i.e., horizontal cut of pdf3D)
+    for t = 1:samplesPerSymb
+        p_y = pdf3D(t,:) / (sum(pdf3D(t,:)) * dx);  % normalized 1D pdf
+        cdf = cumsum(p_y) * dx;
+
+        for k = 1:pam-1
+            % Integrate error outside decision window for level k
+            lowB = decisionBoundaries(k) * (1/scaling);   % back to volts
+            highB = decisionBoundaries(k+1) * (1/scaling);
+
+            idxLow = find(voltageLevels >= lowB, 1);
+            idxHigh = find(voltageLevels >= highB, 1);
+
+            p_err = 1 - (cdf(idxHigh) - cdf(idxLow));
+            SER(k,t) = p_err;
+        end
+    end
+
+    % === Plotting ===
+    figure;
+    colors = lines(pam - 1);
+    eyeNames = {'Top Eye', 'Middle Eye', 'Bottom Eye'};
+    
+    for k = 1:pam-1
+        subplot(pam-1,1,k);
+        semilogy(X, SER(k,:), 'LineWidth', 1.8, 'Color', colors(k,:));
+        grid on;
+        xlim([-0.5, 0.5]);
+        ylim([1e-6, 1]);
+        ylabel('SER');
+        title([eyeNames{k}]);
+        
+        % Highlight minimum eye opening
+        [~, minIdx] = min(SER(k,:));
+        leftIdx = find(SER(k,1:minIdx) > simSettings.SER, 1, 'last');
+        rightIdx = minIdx + find(SER(k,minIdx:end) > simSettings.SER, 1, 'first') - 1;
+
+        if ~isempty(leftIdx) && ~isempty(rightIdx)
+            eyeOpening = X(rightIdx) - X(leftIdx);
+            hold on;
+            plot(X([leftIdx rightIdx]), SER(k,[leftIdx rightIdx]), 'ko', 'MarkerSize', 6);
+            text(X(minIdx), SER(k,minIdx)*2, ...
+                sprintf('%.3f UI', eyeOpening), ...
+                'HorizontalAlignment', 'center', ...
+                'FontWeight', 'bold');
+        end
+
+        if k == pam - 1
+            xlabel('Eye Opening (UI)');
+        end
+    end
+end

@@ -6,7 +6,13 @@ def prbs7(length):
     """
     sequence = []
     for i in range(length):
-        sequence.append(random.choice([0, 1]))
+        x = random.choice([0, 1, 2])
+        if x == 0:
+            sequence.append(0)
+        elif x == 1:
+            sequence.append(0.375)
+        else:
+            sequence.append(0.75)
 
     return sequence
 
@@ -19,8 +25,6 @@ def write_ltspice_pwl(filename, sequence, timestep_ps=20.0):
         prev_bit = sequence[0]
         time_ps = 0.0
         for bit in sequence:
-            if bit:
-                bit = 0.75
             if time_ps > 0:
                 f.write(f"{time_ps-1:.3f}p {prev_bit}\n")
             f.write(f"{time_ps:.3f}p {bit}\n")
@@ -28,8 +32,10 @@ def write_ltspice_pwl(filename, sequence, timestep_ps=20.0):
             prev_bit = bit
 
         # Repeat last point to hold final value
-        if sequence[-1]:
+        if sequence[-1] == 0.75:
             f.write(f"{time_ps:.3f}p 0.75\n")
+        elif sequence[-1] == 0.375:
+            f.write(f"{time_ps:.3f}p 0.375\n")
         else:
             f.write(f"{time_ps:.3f}p 0\n")
 
