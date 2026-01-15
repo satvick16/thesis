@@ -1,0 +1,41 @@
+CIV102H1  STRUCT. & MATERIALS                      0.50  90  A+     B      
+ESC101H1  PRAXIS I                                 0.50  80  A-     B      
+ESC103H1  ENG. MATHEMATICS & COMPUTATION           0.50  88  A      B      
+ESC180H1  INTRO TO COMPUTER PROGRAMMING            0.50  97  A+     A-     
+ESC194H1  CALCULUS I                               0.50  93  A+     B      
+PHY180H1  CLASSICAL MECHANICS                      0.50  91  A+     A-     
+ECE159H1  FUNDAMENTALS OF ELEC. CIRCUITS           0.50  88  A      B      
+ESC102H1  PRAXIS II                                0.50  80  A-     B+     
+ESC190H1  COMP. ALGOR. & DATA STRUCTURES           0.50  84  A-     B-     
+ESC195H1  CALCULUS II                              0.50  92  A+     B-     
+MAT185H1  LINEAR ALGEBRA                           0.50  79  B+     B      
+MSE160H1  MOLECULES AND MATERIALS                  0.50  85  A      B+     
+AER210H1  VECTOR CALC. & FLUID MECHANICS           0.50  93  A+     B-     
+CHE260H1  THERMODYNAMICS                           0.50  86  A      B      
+ECE253H1  DIGITAL & COMPUT.SYS                     0.50  79  B+     B-     
+ESC203H1  ENGINEERING AND SOCIETY                  0.50  81  A-     B      
+MAT292H1  ORDINARY DIFFERENTIAL EQUATION           0.50  85  A      B      
+PHY293H1  WAVES AND MODERN PHYSICS                 0.50  80  A-     B      
+BME205H1  FUNDAMENTALS OF BIOMEDICAL ENG           0.50  78  B+     B      
+ECE259H1  ELECTRICITY AND MAGNETISM                0.50  94  A+     C+     
+ECE286H1  PROBABILITY & STATISTICS                 0.50  88  A      B      
+ESC204H1  PRAXIS III                               0.50  81  A-     B+     
+PHY294H1  QUANTUM AND THERMAL PHYSICS              0.50  83  A-     B-     
+TEP327H1  ENGINEERING AND LAW                      0.50  80  A-     B+     
+CHE374H1  ECO.ANA.& DEC.MAKING                     0.50  86  A      B+     
+ECE349H1  INTRODUCTION TO ENERGY SYSTEMS           0.50  80  A-     B-     
+ECE352H1  COMPUTER ORGANIZATION                    0.50  78  B+     B-     
+ECE355H1  SIGNAL ANALYSIS &COMMUNICATION           0.50  78  B+     B-     
+ECE360H1  ELECTRONICS                              0.50 100  A+     B      
+MAT389H1  COMPLEX ANALYSIS                         0.50  81  A-     B      
+ECE350H1  SEMICONDUCTOR ELEC DEVICES               0.50  83  A-     B+     
+ECE353H1  SYSTEMS SOFTWARE                         0.50  88  A      B+     
+ECE354H1  ELECTRONIC CIRCUITS                      0.50  88  A      B+     
+ECE356H1  INTRODUCTION TO CONTROL THEORY           0.50  93  A+     B      
+ECE357H1  ELECTROMAGNET.FIELDS                     0.50  87  A      B      
+ECE363H1  COMMUNICATION SYSTEMS                    0.50  89  A      *      
+JRE410H1  MARKETS & COMPETITIVE STRATEGY           0.50  82  A-     B      
+TEP448H1  SYSTEM MAPPING                           0.50  84  A-     A-     
+APS380H1  INTRO TO ELECTRIC VEHICLE DES.           0.50  86  A             
+ECE417H1  DIGIT.COMMUNICATION                      0.50  86  A             
+ECE454H1  COMPUTER SYSTEMS PROGRAMMING             0.50  80  A-            
